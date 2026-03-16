@@ -1,32 +1,3 @@
-// import { Toaster } from "@/components/ui/toaster";
-// import { Toaster as Sonner } from "@/components/ui/sonner";
-// import { TooltipProvider } from "@/components/ui/tooltip";
-// import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Index from "./pages/Index";
-// import NotFound from "./pages/NotFound";
-
-// const queryClient = new QueryClient();
-
-// const App = () => (
-//   <QueryClientProvider client={queryClient}>
-//     <TooltipProvider>
-//       <Toaster />
-//       <Sonner />
-//       <BrowserRouter>
-//         <Routes>
-//           <Route path="/" element={<Index />} />
-//           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-//           <Route path="*" element={<NotFound />} />
-//         </Routes>
-//       </BrowserRouter>
-//     </TooltipProvider>
-//   </QueryClientProvider>
-// );
-
-// export default App;
-
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -57,8 +28,6 @@ const App = () => (
           <source src="/bg-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        {/* Dark overlay for contrast - No backdrop-blur to keep it clear */}
-        {/* <div className="absolute inset-0 bg-black/40" /> */}
       </div>
 
       <BrowserRouter>
@@ -68,7 +37,10 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      
+      {/* Vercel Web Analytics Component */}
       <Analytics />
+      
     </TooltipProvider>
   </QueryClientProvider>
 );
