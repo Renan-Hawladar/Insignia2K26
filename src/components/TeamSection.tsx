@@ -40,7 +40,7 @@ const TeamSection = () => {
             transition={{
               repeat: Infinity, // Loop forever
               ease: "linear",   // Maintain a constant speed
-              duration: 25,     // Increase to slow down, decrease to speed up
+              duration: 450,    // INCREASED FROM 150 TO 250 (Higher number = slower speed)
             }}
           >
             {duplicatedMembers.map((m, i) => (
