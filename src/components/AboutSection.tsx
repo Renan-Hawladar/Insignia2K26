@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { FileText, Target, Users, Shield, Rocket } from "lucide-react";
 
 const briefings = [
-  { icon: Target, title: "Objective", desc: "A national-level data analytics competition designed to test your skills across multiple rounds of challenges." },
-  { icon: Users, title: "Crew Size", desc: "Teams of 2-4 analysts working together to complete tasks and identify patterns in complex datasets." },
-  { icon: Shield, title: "Clearance", desc: "Open to all undergraduate and postgraduate students. No impostor checks required — yet." },
-  { icon: FileText, title: "Intel", desc: "Three rounds of increasing difficulty. Only the sharpest crews will survive to the final showdown." },
+  { icon: Target, title: "Objective", desc: "The main objective is to encourage logical and analytical thinking with programming excellence among participants. The event challenges participants through quizzes, aptitude tests, and coding rounds. It aims to enhance problem-solving abilities while promoting collaborative and competitive spirit. Through these rounds, participants showcase their speed and accuracy." },
+  { icon: Users, title: "Crew Size", desc: "Participants must compete with teamsize of two members. Team formation can be the same department or cross department, same college or cross college teams, same academic year or cross academic year. Combined strength is the key to the survival of the competition and reaching the zenith of victory." },
+  { icon: Shield, title: "Clearance", desc: "The competition is open to undergraduate and postgraduate students from any department or college. Both internal and external participants are welcome to register. A small registration fee (₹70 for internal teams & ₹100 for external teams) applies, and participants must retain their receipt for verification on the event day. All eligible students with a passion for coding and problem-solving are encouraged to participate." },
+  { icon: FileText, title: "Intel", desc: "The competition consists of three exciting rounds designed to test different skill sets. The first round, Imposter Interrogation , focuses on quiz and aptitude. The second round, Among Coders , challenges participants with coding problems on HackerRank. The final round, The Emergency Meeting , is a surprise challenge where only the sharpest teams compete for victory." },
 ];
 
 const AboutSection = () => {
@@ -37,11 +37,7 @@ const AboutSection = () => {
           <div>
             <h3 className="font-pixel text-xs text-crew-yellow mb-2">Welcome, Crewmate</h3>
             <p className="text-muted-foreground text-sm leading-relaxed justified-text">
-              Introducing  Insignia 2k26 – Where Code Meets Imagination !!
-              The Computer Science and Engineering Department of MCKVIE in association with Institutions' Innovation Council (IIC) and Institution of Electronics and Telecommunication Engineers (IETE), MCKVIE presents an electrifying inter-college coding extravaganza – Insignia!
-              Insignia offers a platform to showcase your analytical prowess, collaborate with like-minded peers, 
-              and compete for glory. Gear up, assemble your crew, and prepare for the ultimate data mission,
-              because in Insignia, every insight counts and every task matters.
+              Welcome to Insignia, an electrifying inter-college coding competition organized by the CSE Department of MCKVIE. It brings together passionate coders and problem solvers to test their analytical and programming skills. Participants will face exciting challenges across multiple rounds designed to push creativity and logic. Assemble your team, sharpen your coding skills, and get ready to compete for glory and exciting prizes.
             </p>
           </div>
         </motion.div>

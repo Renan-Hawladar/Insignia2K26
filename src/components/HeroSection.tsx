@@ -76,7 +76,6 @@ const HeroSection = () => {
     { src: "/logo2.png", name: "Logo 2" },
     { src: "/logo3.png", name: "Logo 3" },
     { src: "/logo4.png", name: "Logo 4" },
-    { src: "/logo5.png", name: "Logo 5" },
     { src: "/logo6.png", name: "Logo 6" },
     { src: "/logo7.png", name: "Logo 7" },
     { src: "/logo8.png", name: "Logo 8" },
