@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.justified-text {
+    text-align: justify;
+    /* Optional: Improves spacing between words */
+    text-justify: inter-word;
+}
+
+
+@layer base {
+  :root {
+    --background: 230 40% 6%;
+    --foreground: 0 0% 95%;
+
+    --card: 230 30% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 230 30% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 83% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 233 83% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 230 20% 15%;
+    --muted-foreground: 230 10% 55%;
+
+    --accent: 59 92% 65%;
+    --accent-foreground: 230 40% 6%;
+
+    --destructive: 0 83% 42%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 20% 20%;
+    --input: 230 20% 20%;
+    --ring: 185 100% 50%;
+
+    --radius: 0.75rem;
+
+    --crew-red: 0 83% 42%;
+    --crew-blue: 233 83% 50%;
+    --crew-yellow: 59 92% 65%;
+    --crew-cyan: 185 100% 50%;
+    --crew-green: 120 60% 40%;
+    --crew-pink: 330 80% 60%;
+    --crew-orange: 25 90% 50%;
+    --crew-purple: 270 70% 50%;
+    --crew-white: 0 0% 90%;
+    --space-deep: 230 40% 4%;
+    --space-mid: 230 40% 6%;
+
+    --font-pixel: 'Press Start 2P', monospace;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 230 30% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 83% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 233 83% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 230 20% 20%;
+    --sidebar-ring: 185 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-pixel);
+  }
+}
+
+@layer components {
+  .among-card {
+    @apply bg-card rounded-2xl p-6;
+    border: 3px solid hsl(var(--border));
+    box-shadow: 0 0 20px hsl(var(--crew-cyan) / 0.1);
+  }
+
+  .among-card:hover {
+    border-color: hsl(var(--crew-cyan) / 0.5);
+    box-shadow: 0 0 30px hsl(var(--crew-cyan) / 0.2);
+  }
+
+  .emergency-btn {
+    @apply relative px-8 py-4 rounded-full font-bold text-lg uppercase tracking-wider;
+    font-family: var(--font-pixel);
+    font-size: 0.75rem;
+    background: radial-gradient(circle, hsl(0 83% 50%) 0%, hsl(0 83% 35%) 100%);
+    color: white;
+    border: 4px solid hsl(0 0% 20%);
+    box-shadow:
+      0 6px 0 hsl(0 83% 25%),
+      0 0 40px hsl(0 83% 42% / 0.4),
+      inset 0 2px 0 hsl(0 83% 60%);
+    transition: all 0.15s ease;
+  }
+
+  .emergency-btn:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 8px 0 hsl(0 83% 25%),
+      0 0 60px hsl(0 83% 42% / 0.6),
+      inset 0 2px 0 hsl(0 83% 60%);
+  }
+
+  .emergency-btn:active {
+    transform: translateY(4px);
+    box-shadow:
+      0 2px 0 hsl(0 83% 25%),
+      0 0 20px hsl(0 83% 42% / 0.3),
+      inset 0 2px 0 hsl(0 83% 60%);
+  }
+
+  .tablet-nav {
+    background: linear-gradient(180deg, hsl(230 25% 14%) 0%, hsl(230 25% 10%) 100%);
+    border: 3px solid hsl(var(--border));
+    border-radius: 1rem;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px hsl(var(--crew-cyan) / 0.8), 0 0 30px hsl(var(--crew-cyan) / 0.4);
+  }
+
+  .section-title {
+    font-family: var(--font-pixel);
+    @apply text-sm md:text-base lg:text-lg uppercase tracking-widest;
+    color: hsl(var(--accent));
+  }
+
+  .star {
+    @apply absolute rounded-full bg-white;
+    animation: twinkle var(--twinkle-duration, 3s) ease-in-out infinite;
+    animation-delay: var(--twinkle-delay, 0s);
+  }
+
+  .pulse-ring {
+    animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .flip-card {
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    backface-visibility: hidden;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 hsl(var(--crew-cyan) / 0.5); }
+  70% { box-shadow: 0 0 0 10px hsl(var(--crew-cyan) / 0); }
+  100% { box-shadow: 0 0 0 0 hsl(var(--crew-cyan) / 0); }
+}
+
+@keyframes float-drift {
+  0% { transform: translateX(-100px) translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.7; }
+  100% { transform: translateX(calc(100vw + 100px)) translateY(-50px) rotate(20deg); opacity: 0; }
+}
