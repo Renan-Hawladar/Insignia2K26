@@ -60,14 +60,16 @@ const RoundsSection = () => {
                   <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center">
                     <round.icon className={`w-8 h-8 ${round.color}`} />
                   </div>
-                  <p className={`font-pixel text-xs ${round.color}`}>{round.title}</p>
-                  <p className="font-pixel text-sm text-foreground">{round.name}</p>
+                  {/* Added text-center and px-2 here to fix the alignment */}
+                  <p className={`font-pixel text-xs text-center px-2 ${round.color}`}>{round.title}</p>
+                  <p className="font-pixel text-sm text-foreground text-center px-2">{round.name}</p>
                   <p className="text-xs text-muted-foreground mt-2">Hover to reveal →</p>
                 </div>
 
                 {/* Back */}
                 <div className={`flip-card-back absolute inset-0 among-card flex flex-col items-center justify-center p-6 text-center ${round.borderColor}`}>
-                  <p className={`font-pixel text-xs mb-4 ${round.color}`}>{round.name}</p>
+                  {/* Added text-center here just in case as well */}
+                  <p className={`font-pixel text-xs mb-4 text-center ${round.color}`}>{round.name}</p>
                   <p className="text-muted-foreground text-sm leading-relaxed">{round.desc}</p>
                 </div>
               </div>

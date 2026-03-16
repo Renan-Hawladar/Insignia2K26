@@ -2,21 +2,33 @@ import { motion } from "framer-motion";
 import { Instagram, Twitter, Linkedin, Mail, MapPin } from "lucide-react";
 
 const socials = [
-  { icon: Instagram, label: "Instagram", href: "#" },
-  { icon: Twitter, label: "Twitter", href: "#" },
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
   { icon: Mail, label: "Email", href: "mailto:insignia@example.com" },
+  // Add other socials here
 ];
 
 const FooterSection = () => {
   return (
     <footer id="footer" className="py-20 px-4 border-t border-border">
-      <div className="max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Connect */}
+      <div className="max-w-7xl mx-auto">
+        {/* Changed to a 3-column grid for larger screens to fit the new text */}
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 lg:gap-12">
+          
+          {/* About Institute Section */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="section-title mb-4">// The Institute</p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              MCKV Institute of Engineering is committed to fostering innovation and technical excellence among students through exciting challenges like the Halloween-themed Hackathon. The Department of Computer Science & Engineering, established in 1999, is one of the oldest and most reputed departments of the institute, supported by qualified faculty with expertise across diverse domains of computer science and allied fields.
+            </p>
+          </motion.div>
+
+          {/* Connect */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             <p className="section-title mb-4">// Connect With Us</p>
@@ -52,19 +64,6 @@ const FooterSection = () => {
             viewport={{ once: true }}
           >
             <p className="section-title mb-4">// Navigation Map</p>
-            {/* <div className="among-card p-2 overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.919127524847!2d88.34565531088077!3d22.61949497937271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d65da7b3775%3A0x30915f7e98f1b0d5!2sMCKV%20Institute%20of%20Engineering!5e0!3m2!1sen!2sin!4v1772306849563!5m2!1sen!2sin"
-                width="100%"
-                height="250"
-                style={{ border: 0, borderRadius: "0.75rem" }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Navigation Map"
-              />
-            </div> */}
-
             <div className="among-card p-0 overflow-hidden relative border-[4px] border-black rounded-xl shadow-[0_0_15px_rgba(132,255,255,0.3)] bg-[#1a1a1a]">
               {/* Themed Header for the Map */}
               <div className="bg-black/80 px-4 py-1 border-b-2 border-black flex justify-between items-center">
@@ -77,7 +76,7 @@ const FooterSection = () => {
 
               <div className="p-2">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.919127524847!2d88.34565531088077!3d22.61949497937271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d65da7b3775%3A0x30915f7e98f1b0d5!2sMCKV%20Institute%20of%20Engineering!5e0!3m2!1sen!2sin!4v1772306849563!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.854089906661!2d88.34751481535165!3d22.62192938515732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d6ee13f86e3%3A0x67341e98d5c90859!2sMCKV%20Institute%20of%20Engineering!5e0!3m2!1sen!2sin!4v1689230589132!5m2!1sen!2sin"
                   width="100%"
                   height="250"
                   className="rounded-lg transition-all duration-500 grayscale-[0.3] contrast-[1.2] invert-[0.85] hue-rotate-[180deg] brightness-[0.8]"
