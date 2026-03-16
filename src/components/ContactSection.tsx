@@ -2,9 +2,12 @@ import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
 const contacts = [
-  { name: "Architect", role: "Sayantika Nayak", image: "/member12.png", whatsapp: "https://wa.me/9123672492" },
-  { name: "Strategist", role: "Debayan Ghosh", image: "/member9.png", whatsapp: "https://wa.me/6291873010" },
-  { name: "Captain", role: "Argha Kamal Saha", image: "/member1.png", whatsapp: "https://wa.me/7890735867" },
+  { name: "Argha Kamal Saha", role: "CSE-1", image: "/member1.png", whatsapp: "https://wa.me/7890735867" },
+  { name: "Debayan Ghosh", role: "CSE-AIML", image: "/member9.png", whatsapp: "https://wa.me/916291873010" },
+  { name: "Indrajit Biswas", role: "CSE-2", image: "/member3.png", whatsapp: "https://wa.me/918617204007" },
+  { name: "Megha Bhattacharjee", role: "CSE-1", image: "/member7.png", whatsapp: "https://wa.me/917439134600" },
+  { name: "Meghna Bakuli ", role: "CSE-2", image: "/member11.png", whatsapp: "https://wa.me/917003286411" },
+  { name: "Sayantika Nayak", role: "CSE-DS", image: "/member12.png", whatsapp: "https://wa.me/919123672492" },
 ];
 
 const ContactSection = () => {
