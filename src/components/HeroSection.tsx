@@ -92,22 +92,33 @@ const HeroSection = () => {
         transition={{ delay: 0.3, duration: 0.7 }}
         className="max-w-3xl"
       >
-        {/* --- 5 LOGOS IN A ROW --- */}
-        {/* --- LIGHT HIGH-CONTRAST LOGO PANEL --- */}
+        {/* --- ANIMATED BUBBLE LOGOS --- */}
         <motion.div 
-          className="flex w-fit mx-auto flex-row justify-center items-center gap-4 md:gap-8 p-1 mt-5 rounded-2xl bg-white/50 backdrop-blur-xl border-2 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.1 }}
+          className="flex w-full mb-8 max-w-5xl mx-auto flex-row justify-between sm:justify-center items-center gap-2 sm:gap-4 px-2 sm:px-4 py-8 mt-2"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.8, type: "spring" }}
         >
           {topLogos.map((logo, index) => (
-            <div key={index} className="flex items-center justify-center">
+            <motion.div 
+              key={index}
+              className="w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 flex flex-shrink min-w-0 items-center justify-center rounded-full bg-white shadow-[0_4px_15px_rgba(255,255,255,0.4)] hover:shadow-[0_4px_25px_rgba(255,255,255,0.8)] transition-all duration-300"
+              animate={{ y: [0, -8, 0] }}
+              transition={{ 
+                duration: 3 + (index % 3) * 0.5, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                delay: index * 0.2
+              }}
+              whileHover={{ scale: 1.15 }}
+            >
               <img 
                 src={logo.src} 
                 alt={logo.name} 
-                className="w-10 h-10 md:w-16 md:h-16 object-contain brightness-100 contrast-150" 
+                className="w-6 h-6 sm:w-10 sm:h-10 md:w-14 md:h-14 object-contain"
+                fetchPriority="high"
               />
-            </div>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -133,10 +144,10 @@ const HeroSection = () => {
         </motion.div>
 
         <h1 className="font-pixel text-xl md:text-3xl lg:text-4xl leading-relaxed mb-6">
-          <span className="text-white">Mission: </span>
+          <span className="text-foreground">Mission: </span>
           <span className="text-crew-yellow glow-text">Turn Data</span>
           <br />
-          <span className="text-white">into </span>
+          <span className="text-foreground">into </span>
           <span className="text-crew-cyan glow-text">Insights</span>
         </h1>
 
