@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { Instagram, Twitter, Linkedin, Mail, MapPin } from "lucide-react";
 
 const socials = [
-  { icon: Mail, label: "Email", href: "mailto:insignia@example.com" },
-  // Add other socials here
+  { icon: Mail, label: "Email", href: "mailto:insignia2k26@gmail.com" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/insignia_2026/" },
 ];
 
 const FooterSection = () => {

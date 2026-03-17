@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "What is the last date to register?",
-    a: "The last date for registration is 20th March 2026. Participants are encouraged to register early to secure their spot.",
+    a: "The last date for registration is 26th March 2026. Participants are encouraged to register early to secure their spot.",
   },
   {
     q: "What should participants bring on the event day?",
