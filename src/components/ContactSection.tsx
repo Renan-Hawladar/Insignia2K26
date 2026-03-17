@@ -42,6 +42,8 @@ const ContactSection = () => {
                     src={c.image}
                     alt={c.name}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <a

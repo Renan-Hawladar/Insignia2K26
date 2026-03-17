@@ -30,7 +30,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-crew-cyan transition-colors"
+              className="text-sm px-2"
             >
               {link.label}
             </a>
@@ -57,7 +57,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-crew-cyan transition-colors py-1"
+              className="py-1 text-center border-b border-white/10 last:border-b-0"
               onClick={() => setOpen(false)}
             >
               {link.label}

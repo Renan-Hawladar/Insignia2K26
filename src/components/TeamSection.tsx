@@ -54,6 +54,8 @@ const TeamSection = () => {
                     src={m.image}
                     alt={m.name}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <p className="font-pixel text-xs text-foreground">{m.name}</p>
