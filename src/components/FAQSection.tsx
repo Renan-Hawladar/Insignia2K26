@@ -21,11 +21,11 @@ const faqs = [
   },
   {
     q: "When and where will Insignia 2K26 take place?",
-    a: "The event will be held at MCKVIE, Block A, 3rd Floor, CSE Department on 27th March 2026 from 9:30 AM onwards.",
+    a: "The event will be held at MCKVIE, Block A, 3rd Floor, CSE Department on 9th April 2026 from 9:30 AM onwards.",
   },
   {
     q: "What is the last date to register?",
-    a: "The last date for registration is 26th March 2026. Participants are encouraged to register early to secure their spot.",
+    a: "The last date for registration is 8th April 2026. Participants are encouraged to register early to secure their spot.",
   },
   {
     q: "What should participants bring on the event day?",
