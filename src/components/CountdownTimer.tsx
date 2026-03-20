@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-// Set target date: 27th March 2026, 10:00 AM IST
-const TARGET_DATE = new Date("2026-03-27T10:00:00+05:30");
+// Set target date: 9th April 2026, 10:00 AM IST
+const TARGET_DATE = new Date("2026-04-09T09:30:00+05:30");
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
