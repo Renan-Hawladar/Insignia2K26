@@ -85,7 +85,7 @@ const CountdownTimer = () => {
                      viewport={{ once: true }}
                      transition={{ delay: 1.5, duration: 0.3 }}
                    >
-                     DATE: 27TH MARCH 2026
+                     DATE: 9TH April 2026
                    </motion.span>
                 </div>
                 
