@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-const members = Array.from({ length: 18 }, (_, i) => ({
-  name: ["Captain", "Navigator", "Engineer", "Commander", "Sentinel", "Security", "Pilot", "Analyst", "Strategist", "Operator", "Recon", "Architect", "Medic", "Scientist","Creator","Director","Broadcaster","Communicator"][i],
-  role: ["Argha Kamal Saha", "Ishan Chatterjee", "Indrajit Biswas", "Renan Hawladar", "Joyita Chakraborty", "Hritam Das", "Megha Bhattacharjee", "Soumyajit Chatterjee", "Debayan Ghosh", "Ahona Bose", "Meghna Bakuli", "Sayantika Nayak", "Ankan Samanta", "Sanjib Ghara","Suchetana Mukherjee","Indrajit Pahari","Arkadeep Si","Ashis Kumar Rai"][i],
+const members = Array.from({ length: 19 }, (_, i) => ({
+  name: ["Captain", "Navigator", "Engineer", "Commander", "Sentinel", "Security", "Pilot", "Analyst", "Strategist", "Operator", "Recon", "Architect", "Medic", "Scientist","Creator","Director","Broadcaster","Communicator","Signal Booster"][i],
+  role: ["Argha Kamal Saha", "Ishan Chatterjee", "Indrajit Biswas", "Renan Hawladar", "Joyita Chakraborty", "Hritam Das", "Megha Bhattacharjee", "Soumyajit Chatterjee", "Debayan Ghosh", "Ahona Bose", "Meghna Bakuli", "Sayantika Nayak", "Ankan Samanta", "Sanjib Ghara","Suchetana Mukherjee","Indrajit Pahari","Arkadeep Si","Ashis Kumar Rai","Shrestho Sen"][i],
   image: `/member${i + 1}.png`,
 }));
 
